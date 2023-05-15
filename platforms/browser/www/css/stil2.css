@@ -1,0 +1,227 @@
+body{
+    background-color:#ffffff; 
+    /*#faed5a svjetlija žuta*/
+    /*#F4D03F  jača žuta*/ 
+}
+.ui-page.ui-page-theme-a.ui-page-active{
+  background-color:white;
+}
+
+.ui-checkbox{
+  position: relative;
+  top:530px;
+  height:20px;
+}
+#zvuk{
+  position: absolute;
+  top:80%;
+  left:50%;
+}
+.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left{
+  position: absolute;
+  top:100%;
+  height: 30px;
+  width: 1px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 80px;
+}
+
+.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left.ui-checkbox-on{
+  text-align: center;
+  background-image: url("https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/volume-24-512.png");
+  background-repeat: no-repeat;
+  background-position:right;
+  background-size: 45px;
+}
+.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left.ui-checkbox-on::after{
+  background-color: black;
+  content: none;
+}
+.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left.ui-checkbox-off{
+  text-align: center;
+  background-image: url("https://cdn3.iconfinder.com/data/icons/unicons-vector-icons-pack/32/volume-off-512.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 45px;
+}
+
+#btnInfo {
+  display: inline-block;
+  width: 175px;
+  height: 50px;
+  border-radius: 70px;
+  background-color: #FFFFFF;
+  background-image: url("https://cdn4.iconfinder.com/data/icons/miu/24/circle-info-more-information-detail-outline-stroke-512.png");
+  background-repeat: no-repeat;
+  background-size: 28%;
+  -webkit-box-shadow: 0 4px 6px 1px rgba(0,0,0,0.3), 0 -2px 1px 1px rgba(0,0,0,0.1) inset, 0 2px 1px 1px rgba(255,255,255,0.2) inset;
+  box-shadow: 0 4px 6px 1px rgba(0,0,0,0.3), 0 -2px 1px 1px rgba(0,0,0,0.1) inset, 0 2px 1px 1px rgba(255,255,255,0.2) inset;
+  border: none;
+  color:black;
+  font-family:Lucida Console, Courier, monospace;
+  font-weight:bold;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#btnScore {
+  display: inline-block;
+  width: 175px;
+  height: 50px;
+  border-radius: 70px;
+  background-color: #FFFFFF;
+  background-image: url("http://dotsandboxes.org/graphics/svg/iconmonstr-trophy-7-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 28%;
+  border: none;
+  -webkit-box-shadow: 0 4px 6px 1px rgba(0,0,0,0.3), 0 -2px 1px 1px rgba(0,0,0,0.1) inset, 0 2px 1px 1px rgba(255,255,255,0.2) inset;
+  box-shadow: 0 4px 6px 1px rgba(0,0,0,0.3), 0 -2px 1px 1px rgba(0,0,0,0.1) inset, 0 2px 1px 1px rgba(255,255,255,0.2) inset;
+  color: #000;
+  font:normal  15px Maison Mono;
+  font-family:Lucida Console, Courier, monospace;
+  font-weight:bold;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.5s;
+  position: absolute;
+  top: 71%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#logo{
+  font:bold  50px Maison Mono;
+  font-family:Courier, monospace;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+#btnStart {
+    display: inline-block;
+    margin: 0;
+    padding: 15px 0;
+    width: 200px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 4px 6px 1px rgba(0,0,0,0.3), 0 -2px 1px 1px rgba(0,0,0,0.1) inset, 0 2px 1px 1px rgba(255,255,255,0.2) inset;
+            box-shadow: 0 4px 6px 1px rgba(0,0,0,0.3), 0 -2px 1px 1px rgba(0,0,0,0.1) inset, 0 2px 1px 1px rgba(255,255,255,0.2) inset;
+    border: none;
+    border-radius: 60px;
+    color: #000;
+    font:normal  24px Maison Mono;
+    font-family:Courier, monospace;
+    font-weight:bold;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes flash {
+    0% {
+      box-shadow: 0 0 10px 10px #0e9c76,
+                  0 0 30px 30px #0e9c76 inset;
+    }
+  }
+  
+  /*#btnStart {
+    animation: flash 4s infinite linear;
+  }*/
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    width: 70%; 
+    height: 80%;
+    -webkit-animation-name: fadeIn; 
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+    border-color: #000;
+    color:black;
+    border:solid 7px;
+    overflow:auto;
+}
+  
+/* Modal Content */
+.modal-content {
+    position: relative;
+    bottom: 50;
+    left:50;
+    background-color: #fefefe;
+    height:100%;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close2 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover,
+.close2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-header {
+  padding: 2px 16px;
+  background-color:black;
+  /*#2980B9 - plava*/
+  color: white;
+  text-align: center;
+}
+.modal-body {
+  padding: 2px 16px; 
+  background-color: white;
+}
+
+ #ispis{
+   color: black;
+   font-family: Courier New, monospace;
+   text-align: center;
+ }
+ #ispisScore{
+  color: black;
+  font-family: Courier New, monospace;
+  font-size: 20px;
+}
+
+/*------------------------------*/
+

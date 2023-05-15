@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- Link na CSS stil -->
+        <link href="css/glavniStil.css" type="text/css" rel="stylesheet" />
+        <!-- Link na JavaScript datoteku -->
+        <script type="text/javascript" src="js/igra.js"></script>
+        <link rel="stylesheet"href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Igra</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="simon">
+                <div id="first"></div>
+                <div id="a"></div>
+                <div id="b"></div>
+                <div id="c"></div>
+                <div id="d"></div>
+                <div id="sixth"></div>
+            </div>
+            <div id="count">0</div>
+        </div>
+        <div id="start" class="slideUp floating">Pritisni kad si spreman <img src="img/click2.png" width="100" height="100"></div>
+        <div id="fail">Game over <br><span>Click to retry</span></div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1>Game over</h1>
+                  </div>
+                  <div class="modal-body"><br>
+                      <h3><div id="highscore"></div></h3>                  
+                      <label for="ime" id="unos"><h3>Unesite svoje ime:</h3> 
+                    <input type="text" id="ime" name ="ime"/> </label>
+                    <h4>Dopuštate li korištenje lokacije?</h4>
+                    <label for="lokacija">
+                    <input type="checkbox" id="lokacija" name ="lok" value="1" />  </label>
+                    <button id="btnSpremi">Spremi score</button>
+                    
+                    <div id="container1">
+                            <button id="btnHome"></button>   
+                            <button id="btnRepeat"></button>                         
+                      </div>  
+                  </div>
+                  <div class="modal-footer">                  
+                  </div>
+                </div>
+              </div>
+        
+        <audio controls id="sound">
+            <source id="tune" src="http://www.chiptape.com/chiptape/sounds/medium/PlaceTrap.wav" type="audio/wav">
+        </audio>   
+    </body>
+</html>

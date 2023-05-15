@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="cordova.js"></script> 
+        <!-- Link na CSS stil -->
+        <link href="css/stil2.css" type="text/css" rel="stylesheet" />
+        <!-- Link na JavaScript datoteku -->
+        <script type="text/javascript" src="js/main.js"></script>
+     
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Naslovna</title>
+    </head>
+    <body>
+        <div id="logo"><img src="img/Izrezak.PNG" width="=200px" height="200px"></div>
+        <button id="btnStart">Start</button>    
+        <button id="btnInfo">&nbsp;Info</button>  
+        <button id="btnScore">&nbsp;&nbsp;High Score</button>
+
+        <!--<div><label for="zvuk">
+          <input type="checkbox" id="zvuk" name ="zv" value="1" />  </label>
+        </div>-->
+
+        <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Pravila igre</h2>
+                  </div>
+                  <div class="modal-body">
+                    <div id="ispis"></div>
+                  </div>
+                </div>
+              </div>
+
+
+          <div id="myModal2" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <span class="close2">&times;</span>
+                    <h2>High Score</h2>
+                  </div>
+                  <div class="modal-body">
+                    <div id="ispisScore"></div>
+                  </div>
+                </div>
+              </div>
+    </body>
+</html>

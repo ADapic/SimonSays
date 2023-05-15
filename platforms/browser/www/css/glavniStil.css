@@ -1,0 +1,317 @@
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family:Lucida Console, Courier, monospace;
+}
+
+audio {
+  display:none;
+}
+
+#highscore{
+  font-family:Lucida Console, Courier, monospace;
+}
+#unos{
+  font-family:Lucida Console, Courier, monospace;
+}
+h5,h3,h4{
+  font-family:Lucida Console, Courier, monospace;
+}
+#btnSpremi{
+  font-family:Lucida Console, Courier, monospace;
+  background-color: #ffffff;
+    -webkit-box-shadow: 0 4px 6px 1px rgba(0,0,0,0.3), 0 -2px 1px 1px rgba(0,0,0,0.1) inset, 0 2px 1px 1px rgba(255,255,255,0.2) inset;
+            box-shadow: 0 4px 6px 1px rgba(0,0,0,0.3), 0 -2px 1px 1px rgba(0,0,0,0.1) inset, 0 2px 1px 1px rgba(255,255,255,0.2) inset;
+    border: none;
+    border-radius: 60px;
+}
+.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left{
+  height: 15px;
+  width: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border-radius: 60px;
+}
+#lokacija{
+  position: absolute;
+  top:0%;
+  left:50%;
+}
+.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left.ui-checkbox-on{
+  text-align: center;
+  background-image: url("https://cdn.onlinewebfonts.com/svg/img_194914.png");
+  background-repeat: no-repeat;
+  background-position-x: 44px;
+  background-size: 25px;
+}
+.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left.ui-checkbox-on::after{
+  background-color: black;
+}
+.ui-btn.ui-corner-all.ui-btn-inherit.ui-btn-icon-left.ui-checkbox-off{
+  text-align: center;
+  background-image: url("https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_location_off_48px-512.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 40px;
+}
+
+
+#start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding:200px 300px;
+  transform: translate(-50%, -50%);
+  font-size:50px;
+  color:#FFFFFF;
+  /*width:179px;*/
+  text-align:center;
+  font-family: Courier New, monospace;
+}
+
+#start:hover {
+  cursor:pointer;
+}
+
+#fail {
+  display:block;
+  width:400px;
+  height:350px;
+  text-align:center;
+  position:relative;
+  margin:0 auto;
+  font-size:105px;
+  color:#ffffff;
+  padding-top:95px;
+  display:none;
+}
+
+#fail span {
+  font-size:50px;
+}
+
+#fail:hover {
+  cursor:pointer;
+}
+
+
+#simon, #count {
+  filter: blur(5px); /* Doesn't work anywhere yet */
+  -webkit-filter: blur(5px);
+}
+
+#container {
+  position: absolute;
+  width:100%;
+  height: 100%;
+}
+
+#count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:40px;
+  color:#FFFFFF;
+  width:80px;
+  text-align:center;
+  
+}
+
+#simon {
+  position: absolute;
+  width:100%;
+  height: 100%;
+}
+#simon #first{
+    position: relative;
+}
+
+/*#1aff00*/
+#simon #a {
+    border: 5px solid;
+    border-color:#2ACC31;
+    background: #2ACC31;
+    left: 0;
+    top:0;
+    width: 47%;
+    height: 50%;
+    float: left;
+}
+/*#ff0b00*/
+#simon #b {
+   
+    border: 5px solid;
+    border-color: #DC2A19;
+    background: #DC2A19;
+    right: 0;
+    top:0;
+    width: 47%;
+    height: 50%;
+    float: right;
+   
+}
+/*#ffec00*/
+#simon #c {
+    border: 5px solid;
+    border-color:#F2C927;
+    background: #F2C927;
+    left:0;
+    bottom: 0;
+    width: 47%;
+    height: 50%;
+    float: left;
+    
+}
+/*#29abd0*/
+#simon #d {
+    border: 5px solid;
+    border-color:#1586D4;
+    background: #1586D4;
+    right:0;
+    bottom: 0;
+    width: 47%;
+    height: 50%;
+    float: right;
+    
+}
+#simon #sixth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+  width: 0;
+  height: 0;
+  border: 53.57142857142857px solid #222222;
+  border-radius: 53.57142857142857px;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.ui-page.ui-page-theme-a.ui-page-active{
+  overflow: hidden;
+}
+/*---------------------------------------*/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 75%; 
+  height: 80%; 
+  -webkit-animation-name: fadeIn; 
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  border-color: black;
+  border:solid 7px;
+  overflow:initial;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  bottom: 50;
+  left:50;
+  background-color: #fefefe;
+  height:100%;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+}
+
+
+.modal-header {
+  text-align: center;
+  padding: 2px 16px;
+  background-color:black ;   /*#408C41 - zelena*/
+  color: white;
+  text-align: center;
+  font-family:Lucida Console, Courier, monospace;
+}
+
+.modal-body {
+  padding: 2px 16px; 
+  background-color: white;
+  text-align: center;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  position:relative;
+  top:100%;
+  background-color: white;
+  color: white;
+ 
+}
+
+#container1 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-220%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+#btnHome {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    left:150%;
+    transform: translate(-20%, 80%); 
+    border-radius: 70px;
+    background-color: #FFFFFF;
+    background-image: url("https://static.thenounproject.com/png/901844-200.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: 0.5s;
+    z-index: 2;
+}
+  
+#btnRepeat {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    left:190%;
+    transform: translate(50%, 80%);
+    border-radius: 70px;
+    background-color: rgb(255, 255, 255);
+    background-image: url("https://static.thenounproject.com/png/74759-200.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
